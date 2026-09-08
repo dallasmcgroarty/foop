@@ -523,6 +523,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://nawtch.app/contact/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://nawtch.app/diets/arena/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
