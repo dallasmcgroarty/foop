@@ -168,6 +168,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         one entry. For a trend that actually means something, try to log at roughly the <strong>same time of
         day</strong> each time — weight can swing a few pounds/kilos just from food, water, and time of day.
         <br /><br />
+        <strong>Set a goal weight</strong> to turn tracking into a countdown: pick a direction (lose or gain), a
+        target weight, and a target date, and the Weight page shows the days remaining (or overdue) until then.
+        Your starting weight is captured automatically — from today's entry if you've already logged one, or
+        from the next entry you log if you haven't — so progress is measured from wherever you actually started,
+        not from when you happened to set the goal. Hit the target and you'll get a "Goal complete!" banner
+        showing how many days it took; only one goal can be active at a time, and you can delete it early if
+        your target changes.
+        <br /><br />
         Try it on the <a href="/weight/">Weight Tracker page</a>.
       </div>
     </div>
@@ -224,46 +232,25 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
       <div class="info-banner-body">
         The Calculators page is a free set of fitness and nutrition calculators for the numbers Nawtch itself
-        doesn't calculate for you — how much to eat, how hard you're working out, and where your body composition
-        and strength stand right now. Every one of them is evidence-based, cites its source formula, and runs
-        entirely on your device — nothing you type is stored or sent anywhere.
+        doesn't calculate for you — how much to eat, how your body composition and measurements stack up,
+        how hard you're working out, and daily habits like water and sleep. Every one of them is evidence-based,
+        cites its source formula, and runs entirely on your device — nothing you type is stored or sent anywhere.
         <br /><br />
-        <strong>Calorie Calculator</strong> — the fastest way to get a daily calorie target: fill in your stats
-        and goal and skip straight to a number, no BMR/TDEE terminology required.
+        <strong>Calorie & macro targets</strong> — Calorie, TDEE, BMR, Macro, and Protein calculators, for
+        turning your stats and goal into a daily number (or a protein/carb/fat breakdown). <strong>Apply to
+        Settings</strong> on the TDEE calculator writes its result straight into your Settings calorie target.
         <br /><br />
-        <strong>TDEE Calculator</strong> — your Total Daily Energy Expenditure, the calories it takes to maintain
-        your current weight, adjusted into a range for losing, gaining, or maintaining. <strong>Apply to
-        Settings</strong> writes the result straight into your Settings calorie target.
+        <strong>Body composition & measurements</strong> — Navy Body Fat %, BMI, Waist-to-Height Ratio, and Ideal
+        Weight calculators, from a few tape-measure or scale inputs.
         <br /><br />
-        <strong>BMR Calculator</strong> — your Basal Metabolic Rate, the calories your body burns at complete
-        rest, for when you just want that number without an activity level or goal attached.
+        <strong>Activity & performance</strong> — Calories Burned, One-Rep Max, VO2 Max, and Walking Calorie
+        calculators, for estimating energy burn and fitness level from a workout, a set, or a test.
         <br /><br />
-        <strong>Macro Calculator</strong> — turns a calorie target (your just-calculated TDEE/BMR, your saved
-        Settings range, or a number you type in) into protein/carb/fat grams, with High Protein, Low Carb, Low
-        Fat, and Standard starting points you can customize further.
+        <strong>Daily habits</strong> — Water Intake and Sleep Cycle calculators, for hydration targets and
+        wake-up timing.
         <br /><br />
-        <strong>Body Fat % Calculator</strong> — estimates body fat percentage from a few tape-measure inputs
-        (height, neck, waist, and hip for women) using the U.S. Navy circumference method.
-        <br /><br />
-        <strong>BMI Calculator</strong> — checks your body mass index against the CDC's standard adult category
-        thresholds, a quick population-level screening measure.
-        <br /><br />
-        <strong>Ideal Weight Calculator</strong> — a reference weight range from the Devine formula, the clinical
-        standard used for medication dosing, based on your sex and height.
-        <br /><br />
-        <strong>Calories Burned Calculator</strong> — estimates calories burned for walking, running, cycling,
-        swimming, weightlifting, yoga, and more using standard MET values for each activity.
-        <br /><br />
-        <strong>One-Rep Max Calculator</strong> — estimates your max single-rep lift from a recent set's weight
-        and reps, showing both the Epley and Brzycki formulas side by side.
-        <br /><br />
-        <strong>VO2 Max Calculator</strong> — estimates your aerobic fitness three ways: the resting heart rate
-        method, the Cooper 12-minute run test, or the Rockport 1-mile walk test.
-        <br /><br />
-        <strong>Walking Calorie Calculator</strong> — a more precise calorie estimate built specifically for
-        walking, using the ACSM walking metabolic equation with your distance, time, and weight.
-        <br /><br />
-        Try them on the <a href="/calculators/">Fitness &amp; Nutrition Calculators page</a>.
+        The full, current list (with more added over time) is on the <a href="/calculators/">Fitness &amp;
+        Nutrition Calculators page</a>.
       </div>
     </div>
     <div class="info-banner">
@@ -273,15 +260,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <span class="info-banner-chevron">▼</span>
       </div>
       <div class="info-banner-body">
-        The Diets page is a hub linking to a dedicated page for each of 9 popular eating patterns —
-        Mediterranean, DASH, Intermittent Fasting, Keto, Plant-Based/Vegan, Paleo, MIND, Whole30, and Flexible
-        Dieting/IIFYM. Each page covers the actual rules, the cited research behind it (or, for Whole30, an
-        honest note that no independent clinical trial exists for it), concrete food examples, a sample day of
-        eating, who it might or might not suit, and links to reputable outside sources if you want to go
-        deeper. It's meant purely as a starting point for research, not medical advice — check with a doctor
-        or registered dietitian before making a real change to how you eat.
+        The Diets page is a hub linking to a dedicated page for each of 15 popular eating patterns —
+        Mediterranean, DASH, Intermittent Fasting, Keto, Plant-Based/Vegan, Paleo, MIND, Whole30, Flexible
+        Dieting/IIFYM, Flexitarian, Volumetrics, Low-FODMAP, Blue Zones, Carnivore, and Eating on GLP-1
+        Medications. Each page covers the actual rules, the cited research behind it (or, for diets like
+        Whole30 and Carnivore, an honest note about how thin or nonexistent independent clinical trials are),
+        concrete food examples, a sample day of eating, who it might or might not suit, and links to reputable
+        outside sources if you want to go deeper. It's meant purely as a starting point for research, not
+        medical advice — check with a doctor or registered dietitian before making a real change to how you
+        eat.
         <br /><br />
         Take a look at the <a href="/diets/">Diets page</a>.
+        <br /><br />
+        <strong>Diet Arena</strong>, at the top of that page, lets you pick any two diets and see them
+        side by side — typical foods, eating pattern, macro emphasis, evidence strength, restrictiveness, and
+        more — using the same categories for both so the comparison is apples-to-apples. It's built as a
+        reference tool, not a recommendation engine: it never declares one diet "better" than the other.
+        <br /><br />
+        Try it at <a href="/diets/arena/">Diet Arena</a>.
       </div>
     </div>
     <div class="info-banner">
