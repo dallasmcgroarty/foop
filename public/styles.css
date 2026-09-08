@@ -3167,3 +3167,82 @@ input[readonly] {
 .tool-card:hover .tool-card-arrow {
   color: var(--accent);
 }
+
+/* DIET ARENA — comparison page (two-column side-by-side, stacked on mobile) */
+.arena-header-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.arena-side {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.arena-side-name {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.arena-side-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.arena-row {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.arena-row-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.arena-row-values {
+  display: flex;
+  gap: 16px;
+}
+
+.arena-value {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.arena-value-diet {
+  display: none;
+}
+
+@media (max-width: 660px) {
+  .arena-header-row,
+  .arena-row-values {
+    flex-direction: column;
+  }
+
+  /* On the stacked mobile layout, column position no longer ties a value
+     back to its diet, so label each value explicitly. */
+  .arena-value-diet {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+}
