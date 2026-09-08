@@ -110,7 +110,7 @@ export const DIETS: Diet[] = [
       'Limited long-term advantage — meta-analyses show short-term benefits similar to other calorie-restricted diets but no clear long-term edge, with real adherence and safety caveats (LDL increases in some people, dropout as high as 54–91% in some trial arms).',
     restrictiveness: 'High — cuts entire food groups; trial dropout reached over half of participants in some studies.',
     costAccessibility:
-      'Not directly addressed on the existing page; its fatty fish, nuts, and oils are typically pricier than the grain and legume staples it excludes.',
+      "Cost varies widely depending on execution: built on everyday meat, eggs, and vegetables it's comparably priced to a standard diet, but relying on specialty low-carb products like keto bread, pasta, or meal-replacement shakes adds a substantial premium over the same diet made with whole foods.",
     url: '/diets/keto/',
   },
   {
@@ -135,7 +135,7 @@ export const DIETS: Diet[] = [
     restrictiveness:
       'Variable — plant-based is low restrictiveness (a spectrum, no full exclusion); vegan is high (full animal-product exclusion).',
     costAccessibility:
-      'Not directly addressed; requires deliberate attention to B12, iron, omega-3s, vitamin D, and calcium, particularly on a fully vegan diet with less margin for error.',
+      "Generally less expensive overall than a meat- and dairy-centered diet, since savings from cutting meat and dairy tend to outweigh the added cost of vegetables, whole grains, and plant-based meat substitutes, though reliable access to fresh produce remains a real barrier in areas with limited grocery options.",
     url: '/diets/plant-based/',
   },
   {
@@ -157,7 +157,8 @@ export const DIETS: Diet[] = [
     evidenceStrength:
       'Moderate — semi-vegetarian subgroup research shows real but more modest benefits than full vegetarian/vegan patterns; also a U.S. News expert-panel top ranking, not a single clinical trial result.',
     restrictiveness: 'Low — no fixed rules, less structure than plans with explicit food lists or macro targets.',
-    costAccessibility: 'Not directly addressed; implicitly flexible and affordable since no specialty foods are required, just a shift in proportions.',
+    costAccessibility:
+      "Flexible and generally affordable since it's built on standard grocery staples (legumes, whole grains, produce) without requiring specialty or processed meat-substitute products.",
     url: '/diets/flexitarian/',
   },
   {
@@ -201,7 +202,8 @@ export const DIETS: Diet[] = [
     evidenceStrength:
       'Mixed — the original 2015 cohort found 53% lower Alzheimer’s risk (top vs. bottom adherence tertile), but the one major randomized trial (NEJM 2023) found no significant cognitive advantage over a calorie-controlled control diet over 3 years, directly complicating the earlier finding.',
     restrictiveness: 'Low-to-moderate — food-component scoring rather than hard rules, similar structure to Mediterranean/DASH.',
-    costAccessibility: 'Not directly addressed; implicitly similar to Mediterranean/DASH given overlapping foods (fresh produce, fish, olive oil raise cost versus processed staples).',
+    costAccessibility:
+      "Costs more than a standard mixed diet given its reliance on berries, fish, olive oil, and nuts, similar in price to Mediterranean and DASH, and for households on a fixed or limited food budget, may exceed what's practical to sustain long-term.",
     url: '/diets/mind/',
   },
   {
@@ -223,7 +225,8 @@ export const DIETS: Diet[] = [
     evidenceStrength:
       'Limited: no independent clinical trials — only an unpublished, non-peer-reviewed company pilot cohort (~45 participants) plus self-reported alumni surveys. Cleveland Clinic calls it “an experiment,” not an evidence-backed treatment.',
     restrictiveness: 'High — strict, time-limited elimination of multiple food groups at once.',
-    costAccessibility: 'Not directly addressed on the existing page.',
+    costAccessibility:
+      'Relies heavily on compliant packaged condiments, dressings, and marinades that typically cost noticeably more than standard equivalents, though cutting alcohol, takeout, and processed snacks for the 30 days can offset some of that premium.',
     url: '/diets/whole30/',
   },
   {
@@ -238,7 +241,8 @@ export const DIETS: Diet[] = [
     primaryGoal: 'Hit daily protein/carb/fat and calorie targets with maximum food flexibility.',
     bestFor: 'People who do well with structure-light, numbers-based tracking and want the social and travel flexibility of no off-limits foods.',
     macroEmphasis: 'Defined entirely by protein/carb/fat gram targets and usually total calories — the core organizing principle of the diet.',
-    healthConditionRelevance: 'Not applicable / no specific condition addressed on the existing page.',
+    healthConditionRelevance:
+      "Research comparing flexible and rigid approaches to dietary restraint has generally linked flexible, non-black-and-white eating rules to lower rates of binge eating and disordered-eating symptoms than strict, all-or-nothing dieting, though findings aren't fully consistent across studies. The approach is also widely used in physique and bodybuilding contest prep, valued as a way to hit macro targets without the psychological rigidity of a fixed 'clean eating' list.",
     evidenceStrength:
       'Limited/indirect — no peer-reviewed study has evaluated “IIFYM” by that name; supporting evidence comes from the related but distinct “flexible vs. rigid dietary restraint” literature, mostly correlational, with one small RCT (n=23) on macro-based tracking.',
     restrictiveness: 'Low — no food is off-limits, but requires consistent daily tracking to work.',
@@ -262,7 +266,8 @@ export const DIETS: Diet[] = [
     evidenceStrength:
       'Strong relative to similarly-styled diets — comes from a specific, decades-long Penn State research program (Dr. Barbara Rolls), with a year-long RCT (97 obese women) showing greater weight loss and lower hunger from the low-density approach.',
     restrictiveness: 'Low — no foods eliminated, just density-tier awareness; requires some ongoing attention to food composition rather than fixed rules.',
-    costAccessibility: 'Not directly addressed; built around common produce, whole grains, legumes, and lean protein — generally affordable staples.',
+    costAccessibility:
+      'Built on inexpensive, widely available staples (produce, whole grains, legumes, broth-based soups, lean protein) with no specialty products required, making it one of the more budget-friendly structured approaches.',
     url: '/diets/volumetrics/',
   },
   {
@@ -281,7 +286,8 @@ export const DIETS: Diet[] = [
     healthConditionRelevance: 'Irritable bowel syndrome (IBS) specifically — its entire purpose; no evidence supports it as a general “gut health” plan for people without a GI diagnosis.',
     evidenceStrength: 'Strong for IBS specifically — genuinely strong, randomized evidence (meta-analysis of 10 RCTs, 511 participants), though effect size varies by study.',
     restrictiveness: 'High during the elimination phase (temporary), tapering to low/personalized after reintroduction — meant to be short-term, not permanent.',
-    costAccessibility: 'Not directly addressed; long-term unsupervised restriction risks nutrient gaps (fiber, calcium, iron, B vitamins) if reintroduction is skipped.',
+    costAccessibility:
+      'Specialty low-FODMAP-certified products, gluten-free swaps, and lactose-free items typically cost several times more than their standard counterparts, and getting full benefit from the elimination-reintroduction process usually involves working with a dietitian, an added expense not always covered by insurance.',
     url: '/diets/low-fodmap/',
   },
   {
@@ -300,7 +306,8 @@ export const DIETS: Diet[] = [
     evidenceStrength:
       'Contested/mixed — the underlying demographic “longevity hotspot” claim is seriously disputed (age-verification data critiqued in a 2024 Ig Nobel Prize-winning analysis), though the legume-heavy eating pattern itself has independent, better-supported cohort evidence.',
     restrictiveness: 'Low — no macro/calorie structure, mostly-plant descriptive targets rather than hard rules.',
-    costAccessibility: 'Not directly addressed; built around legumes, whole grains, and vegetables — generally affordable staples.',
+    costAccessibility:
+      'Built primarily around legumes, whole grains, and vegetables, among the least expensive protein and staple food sources available, making it one of the more affordable dietary patterns to sustain.',
     url: '/diets/blue-zones/',
   },
   {
@@ -319,7 +326,8 @@ export const DIETS: Diet[] = [
     evidenceStrength:
       'Limited: no randomized controlled trials exist — a 2026 scoping review found only 9 observational human studies (2021–2025), rated NHMRC Levels III–IV (the lowest evidence tiers), concluding long-term safety “cannot be reliably assessed.”',
     restrictiveness: 'Very high — eliminates an entire kingdom of food (all plants), zero dietary fiber by design.',
-    costAccessibility: 'Not directly addressed; relying on meat as the sole food category is typically pricier than grain, legume, and produce staples.',
+    costAccessibility:
+      'Cost depends heavily on which cuts are prioritized: organ meats and cheaper cuts keep cost comparable to a moderate food budget, while relying mainly on premium muscle cuts can push grocery spending well above a standard mixed diet.',
     url: '/diets/carnivore/',
   },
   {
@@ -338,7 +346,8 @@ export const DIETS: Diet[] = [
     evidenceStrength:
       'Strong for the underlying mechanisms cited — DXA-based body-composition substudies (SURMOUNT-1, STEP 1) and clinical reviews, though the page notes a general lack of structured nutrition guidance for GLP-1 patients.',
     restrictiveness: 'Low in food-type terms — no foods banned; the main constraint is a sharply reduced total food volume, which raises the risk of nutrient shortfalls.',
-    costAccessibility: 'Not directly addressed; protein-dense foods and possibly a protein supplement may add cost given how little food volume patients can eat.',
+    costAccessibility:
+      'Prioritizing protein-dense foods at every meal, and sometimes a protein supplement, to hit intake targets on a much smaller food volume can add cost on top of the medication itself.',
     url: '/diets/eating-on-glp-1/',
   },
 ];
