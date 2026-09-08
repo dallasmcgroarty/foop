@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { DIETS } from '../../../data/diets';
+---
+
+<BaseLayout
+  title="Diet Arena: Compare Any Two Diets — Nawtch"
+  description="Pick any two popular diets and compare them side by side — typical foods, eating pattern, macro emphasis, evidence strength, and more."
+  canonicalPath="/diets/arena/"
+  bodyClass="diets"
+>
+  <header>
+    <div class="header-left">
+      <h1>Diet Arena</h1>
+      <p class="subtitle">Pick any two diets to compare them side by side — same categories, no verdict on which is "better."</p>
+    </div>
+    <a class="ghost-btn" href="/diets/">← Back to Diets</a>
+  </header>
+
+  <div class="settings-section">
+    <h2 class="settings-section-title">Choose Two Diets</h2>
+    <div class="settings-section-body">
+      <div class="add-row add-row-2" style="grid-template-columns: 1fr 1fr;">
+        <div class="field-group">
+          <span class="field-label">Diet 1</span>
+          <select id="arena-diet-1" onchange="window.arenaSetDiet(1, this.value)">
+            <option value="">Select a diet…</option>
+            {DIETS.map((d) => <option value={d.slug}>{d.name}</option>)}
+          </select>
+        </div>
+        <div class="field-group">
+          <span class="field-label">Diet 2</span>
+          <select id="arena-diet-2" onchange="window.arenaSetDiet(2, this.value)">
+            <option value="">Select a diet…</option>
+            {DIETS.map((d) => <option value={d.slug}>{d.name}</option>)}
+          </select>
+        </div>
+      </div>
+
+      <p class="field-hint" style="margin-top:14px;font-size:14px;" id="arena-vs-line">Select two diets above to compare them.</p>
+
+      <button class="add-btn" id="arena-compare-btn" style="margin-top:8px;display:none;" onclick="window.arenaGoCompare()">Compare</button>
+    </div>
+  </div>
+
+  <script type="application/json" id="arena-diets-data" is:inline set:html={JSON.stringify(DIETS.map((d) => ({ slug: d.slug, name: d.name })))} />
+  <script src="../../../islands/vanilla/diet-arena/picker.js"></script>
+</BaseLayout>

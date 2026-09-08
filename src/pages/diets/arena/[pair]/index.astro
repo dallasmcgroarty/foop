@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { DIETS, type Diet } from '../../../../data/diets';
+
+export function getStaticPaths() {
+  const paths: { params: { pair: string }; props: { dietA: Diet; dietB: Diet } }[] = [];
+
+  for (let i = 0; i < DIETS.length; i++) {
+    for (let j = i + 1; j < DIETS.length; j++) {
+      const [dietA, dietB] = DIETS[i].slug < DIETS[j].slug ? [DIETS[i], DIETS[j]] : [DIETS[j], DIETS[i]];
+      const pair = `${dietA.slug}-vs-${dietB.slug}`;
+
+      const title = `${dietA.shortName} vs ${dietB.shortName} — Nawtch`;
+      const description = `Compare ${dietA.name} and ${dietB.name} side by side — foods, eating pattern, macros, and evidence strength.`;
+
+      if (title.length > 60) {
+        throw new Error(`Diet Arena title too long (${title.length} chars) for pair "${pair}": ${title}`);
+      }
+      if (description.length > 150) {
+        throw new Error(`Diet Arena description too long (${description.length} chars) for pair "${pair}": ${description}`);
+      }
+
+      paths.push({ params: { pair }, props: { dietA, dietB } });
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  dietA: Diet;
+  dietB: Diet;
+}
+
+const { dietA, dietB } = Astro.props;
+
+const title = `${dietA.shortName} vs ${dietB.shortName} — Nawtch`;
+const description = `Compare ${dietA.name} and ${dietB.name} side by side — foods, eating pattern, macros, and evidence strength.`;
+const pair = `${dietA.slug}-vs-${dietB.slug}`;
+
+const ROWS: { label: string; key: keyof Diet }[] = [
+  { label: 'Typical Foods', key: 'typicalFoods' },
+  { label: 'Foods to Avoid', key: 'foodsToAvoid' },
+  { label: 'Eating Pattern', key: 'eatingPattern' },
+  { label: 'Primary Goal', key: 'primaryGoal' },
+  { label: 'Best For', key: 'bestFor' },
+  { label: 'Macro Emphasis', key: 'macroEmphasis' },
+  { label: 'Health Condition Relevance', key: 'healthConditionRelevance' },
+  { label: 'Evidence Strength', key: 'evidenceStrength' },
+  { label: 'Restrictiveness', key: 'restrictiveness' },
+  { label: 'Cost / Accessibility', key: 'costAccessibility' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath={`/diets/arena/${pair}/`} bodyClass="diets">
+  <header>
+    <div class="header-left">
+      <h1>{dietA.name} vs {dietB.name}</h1>
+      <p class="subtitle">A side-by-side comparison — no verdict on which is "better," just how they differ.</p>
+    </div>
+    <a class="ghost-btn" href="/diets/arena/">← Back to Diet Arena</a>
+  </header>
+
+  <div class="arena-header-row">
+    <div class="arena-side">
+      <h2 class="arena-side-name">{dietA.name}</h2>
+      <p class="arena-side-desc">{dietA.shortDescription}</p>
+      <a class="ghost-btn" href={dietA.url}>View full {dietA.name} page →</a>
+    </div>
+    <div class="arena-side">
+      <h2 class="arena-side-name">{dietB.name}</h2>
+      <p class="arena-side-desc">{dietB.shortDescription}</p>
+      <a class="ghost-btn" href={dietB.url}>View full {dietB.name} page →</a>
+    </div>
+  </div>
+
+  <div class="arena-compare">
+    {ROWS.map((row) => (
+      <div class="arena-row">
+        <div class="arena-row-label">{row.label}</div>
+        <div class="arena-row-values">
+          <div class="arena-value">
+            <span class="arena-value-diet">{dietA.name}</span>
+            {dietA[row.key]}
+          </div>
+          <div class="arena-value">
+            <span class="arena-value-diet">{dietB.name}</span>
+            {dietB[row.key]}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <p class="field-hint" style="margin-top:20px;">
+    Educational only, not medical advice. Want to compare a different pair? <a href="/diets/arena/">Back to Diet Arena</a>.
+  </p>
+</BaseLayout>
